@@ -1,0 +1,5 @@
+name = Bedrock
+description = Custom layouts for panels
+package = Panels
+core = 7.x
+dependencies[] = panels
