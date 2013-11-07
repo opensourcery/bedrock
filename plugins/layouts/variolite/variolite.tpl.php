@@ -15,7 +15,7 @@
  */
 ?>
 
-<div class="panel-display variolite clearfix <?php if (!empty($class)) { print $class; } ?>" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
+<div class="panel-display variolite clearfix <?php if (!empty($class)): print $class; ?>" <?php if (!empty($css_id)): print "id=\"$css_id\""; ?>>
 
   <div class="variolite-sidebar panel-panel">
       <?php print $content['sidebar']; ?>
