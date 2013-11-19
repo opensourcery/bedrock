@@ -11,6 +11,7 @@ $plugin = array(
   'icon' => 'basalt.png',
   'category' => t('Bedrock'),
   'theme' => 'basalt',
+  'admin css' => 'admin.basalt.css',
   'regions' => array(
     'content_header' => t('Content Header'),
     'column_left' => t('Column Left'),
