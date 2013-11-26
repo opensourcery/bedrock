@@ -1,0 +1,61 @@
+////////////////////////
+// Bedrock Granite Layout Partial
+//
+// Layout specific to the Bedrock Granite panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $gutters
+// - $granite-grid
+// Optional Variables
+// - $granite-grid-height
+////////////////////////
+
+@mixin granite-grid-height {
+  $granite-grid-height: false !default;
+
+  @if $granite-grid-height {
+    max-height: $granite-grid-height;
+  }
+}
+
+/*
+ * Grid Setup
+ */
+.granite {
+  .granite-content-header {
+    margin-bottom: $gutters;
+
+    .panel-pane {
+      margin-bottom: $gutters;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include layout($granite-grid) {
+    .granite-column-left {
+      @include grid-span(1, 1);
+    }
+
+    .granite-column-right {
+      @include grid-span(1, 2);
+    }
+  }
+
+  .granite-column {
+    .panel-pane {
+      @include granite-grid-height;
+      margin-bottom: $gutters;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
