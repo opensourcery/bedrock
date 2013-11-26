@@ -1,0 +1,68 @@
+////////////////////////
+// Bedrock Andesite Layout Partial
+//
+// Layout specific to the Bedrock Andesite panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $gutters
+// - $andesite-header-grid
+// - $andesite-grid
+// Optional Variables
+// - $andesite-grid-height
+////////////////////////
+
+@mixin andesite-grid-height {
+  $andesite-grid-height: false !default;
+
+  @if $andesite-grid-height {
+    max-height: $andesite-grid-height;
+  }
+}
+
+/*
+ * Grid Setup
+ */
+.andesite {
+  .andesite-content-header-container {
+    margin-bottom: $gutters;
+  }
+
+  @include layout($andesite-header-grid) {
+    .andesite-content-header-left {
+      @include grid-span(1, 1);
+    }
+
+    .andesite-content-header-right {
+      @include grid-span(1, 2);
+    }
+  }
+
+  @include layout($andesite-grid) {
+    .andesite-column-left {
+      @include grid-span(1, 1);
+    }
+
+    .andesite-column-middle {
+      @include grid-span(1, 2);
+    }
+
+    .andesite-column-right {
+      @include grid-span(1, 3);
+    }
+  }
+
+  .andesite-column {
+    .panel-pane {
+      @include andesite-grid-height;
+      margin-bottom: $gutters;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
