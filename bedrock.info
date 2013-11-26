@@ -1,5 +1,10 @@
 name = Bedrock
 description = Custom layouts for panels
-package = Panels
+package = Frontend
 core = 7.x
+dependencies[] = blockify
+dependencies[] = fences
+dependencies[] = html5_tools
+dependencies[] = magic
+dependencies[] = modernizr
 dependencies[] = panels
