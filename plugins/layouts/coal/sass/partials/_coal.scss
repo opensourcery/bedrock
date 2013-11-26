@@ -1,0 +1,38 @@
+////////////////////////
+// Bedrock Coal Layout Partial
+//
+// Layout specific to the Bedrock Coal panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $gutters
+// - $coal-grid
+////////////////////////
+
+/*
+ * Grid Setup
+ */
+.coal {
+  @include layout($coal-grid) {
+    .coal-column-left {
+      @include grid-span(1, 1);
+    }
+
+    .coal-column-right {
+      @include grid-span(1, 2);
+    }
+  }
+
+  .coal-column {
+    .panel-pane {
+      margin-bottom: $gutters;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
