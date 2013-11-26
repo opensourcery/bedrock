@@ -1,0 +1,53 @@
+////////////////////////
+// Bedrock Variolite Layout Partial
+//
+// Layout specific to the Bedrock Variolite panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $gutters
+// - $variolite-grid
+// - $variolite-content-grid
+////////////////////////
+
+/*
+ * Grid Setup
+ */
+.variolite {
+  @include layout($variolite-grid) {
+    .variolite-sidebar {
+      @include grid-span(1, 1);
+    }
+
+    .variolite-content-container {
+      @include grid-span(1, 2);
+
+      .variolite-content-header {
+        margin-bottom: $gutters;
+      }
+
+      .with-secondary-column {
+        @include layout($variolite-content-grid) {
+          .variolite-content-main-column {
+            @include grid-span(1, 1);
+          }
+
+          .variolite-content-secondary-column {
+            @include grid-span(1, 2);
+
+            .panel-pane {
+              margin-bottom: $gutters;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
