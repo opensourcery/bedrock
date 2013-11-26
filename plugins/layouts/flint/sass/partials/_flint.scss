@@ -1,0 +1,27 @@
+////////////////////////
+// Bedrock Flint Layout Partial
+//
+// Layout specific to the Bedrock Flint panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $flint-grid
+////////////////////////
+
+/*
+ * Grid Setup
+ */
+.flint {
+  @include layout($flint-grid) {
+    .flint-sidebar {
+      @include grid-span(1, 1);
+    }
+
+    .flint-content-main {
+      @include grid-span(1, 2);
+    }
+  }
+}
