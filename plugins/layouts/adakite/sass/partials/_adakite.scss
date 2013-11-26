@@ -1,0 +1,81 @@
+////////////////////////
+// Bedrock Adakite Layout Partial
+//
+// Layout specific to the Bedrock Adakite panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $gutters
+// - $adakite-grid
+// Optional Variables
+// - $adakite-grid-height
+////////////////////////
+
+@mixin adakite-grid-height {
+  $adakite-grid-height: false !default;
+
+  @if $adakite-grid-height {
+    max-height: $adakite-grid-height;
+  }
+}
+
+/*
+ * Grid Setup
+ */
+.adakite {
+  .adakite-content-header {
+    margin-bottom: $gutters;
+
+    .panel-pane {
+      margin-bottom: $gutters;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include layout($adakite-grid) {
+    .adakite-column-left {
+      @include grid-span(1, 1);
+    }
+
+    .adakite-column-middle {
+      @include grid-span(1, 2);
+    }
+
+    .adakite-column-right {
+      @include grid-span(1, 3);
+    }
+
+    .adakite-content-footer-left {
+      @include grid-span(2, 1);
+    }
+
+    .adakite-content-footer-right {
+      @include grid-span(1, 3);
+    }
+  }
+
+  .adakite-column {
+    .panel-pane {
+      @include adakite-grid-height;
+      margin-bottom: $gutters;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .adakite-content-footer {
+    margin-top: $gutters;
+
+    .panel-pane {
+      @include adakite-grid-height;
+    }
+  }
+}
