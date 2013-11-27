@@ -1,0 +1,51 @@
+////////////////////////
+// Bedrock Quartz Layout Partial
+//
+// Layout specific to the Bedrock Quartz panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $gutters
+// - $quartz-grid
+// Optional Variables
+// - $quartz-grid-height
+////////////////////////
+
+@mixin quartz-grid-height {
+  $quartz-grid-height: false !default;
+
+  @if $quartz-grid-height {
+    max-height: $quartz-grid-height;
+  }
+}
+
+/*
+ * Grid Setup
+ */
+.quartz {
+  .quartz-content-header {
+    margin-bottom: $gutters;
+
+    .panel-pane {
+      margin-bottom: $gutters;
+      @include quartz-grid-height;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include layout($quartz-grid) {
+    .quartz-content-header-left {
+      @include grid-span(2, 1);
+    }
+
+    .quartz-content-header-right {
+      @include grid-span(1, 3);
+    }
+  }
+}
