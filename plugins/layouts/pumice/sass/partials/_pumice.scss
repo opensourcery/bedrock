@@ -1,0 +1,38 @@
+////////////////////////
+// Bedrock Pumice Layout Partial
+//
+// Layout specific to the Bedrock Pumice panel layout.
+//
+// Copy this file to your theme's Sass partial structure
+// and include in your SMACSS based layout file.
+//
+// Required Variables
+// - $desktop, $tablet, $mobile (default breakpoints)
+// - $gutters
+// - $pumice-grid
+////////////////////////
+
+/*
+ * Grid Setup
+ */
+.pumice {
+  @include layout($pumice-grid) {
+    .pumice-column-left {
+      @include grid-span(1, 1);
+    }
+
+    .pumice-column-right {
+      @include grid-span(1, 2);
+    }
+  }
+
+  .pumice-column {
+    .panel-pane {
+      margin-bottom: $gutters;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
