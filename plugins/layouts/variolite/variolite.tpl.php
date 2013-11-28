@@ -18,6 +18,7 @@
 <div class="panel-display variolite clearfix <?php if (!empty($class)): print $class; endif; ?>" <?php if (!empty($css_id)): print "id=\"$css_id\""; endif; ?>>
 
   <section class="variolite-content-container">
+
     <?php if ($content['content_header']): ?>
       <div class="variolite-content-header clearfix panel-panel">
           <?php print $content['content_header']; ?>
