@@ -7,17 +7,25 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (default breakpoints)
-// - $gutters
+// - $desktop, $tablet, $mobile (global breakpoints)
+// - $gutters (global)
+// - $content-width (global)
 // - $variolite-grid
 // - $variolite-content-grid
 ////////////////////////
+
+$variolite-grid: 1 4 !default;
+$variolite-content-grid: 3 1 !default;
 
 /*
  * Grid Setup
  */
 .variolite {
+  width: $content-width;
+
   @include layout($variolite-grid) {
+    //@include background-grid;
+
     .variolite-sidebar {
       @include grid-span(1, 1);
     }
@@ -31,6 +39,8 @@
 
       .with-secondary-column {
         @include layout($variolite-content-grid) {
+          //@include background-grid;
+
           .variolite-content-main-column {
             @include grid-span(1, 1);
           }

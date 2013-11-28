@@ -7,18 +7,22 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (default breakpoints)
-// - $gutters
+// - $desktop, $tablet, $mobile (global breakpoints)
+// - $gutters (global)
+// - $content-width (global)
 // - $granite-grid
 // Optional Variables
 // - $granite-grid-height
 ////////////////////////
+
+$granite-grid: 2 !default;
 
 @mixin granite-grid-height {
   $granite-grid-height: false !default;
 
   @if $granite-grid-height {
     max-height: $granite-grid-height;
+    min-height: $granite-grid-height;
   }
 }
 
@@ -26,6 +30,8 @@
  * Grid Setup
  */
 .granite {
+  width: $content-width;
+
   .granite-content-header {
     margin-bottom: $gutters;
 
@@ -38,23 +44,27 @@
     }
   }
 
-  @include layout($granite-grid) {
-    .granite-column-left {
-      @include grid-span(1, 1);
+  .granite-column-container {
+    @include layout($granite-grid) {
+      //@include background-grid;
+
+      .granite-column-left {
+        @include grid-span(1, 1);
+      }
+
+      .granite-column-right {
+        @include grid-span(1, 2);
+      }
     }
 
-    .granite-column-right {
-      @include grid-span(1, 2);
-    }
-  }
+    .granite-column {
+      .panel-pane {
+        @include granite-grid-height;
+        margin-bottom: $gutters;
 
-  .granite-column {
-    .panel-pane {
-      @include granite-grid-height;
-      margin-bottom: $gutters;
-
-      &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

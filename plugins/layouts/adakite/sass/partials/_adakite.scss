@@ -7,18 +7,22 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (default breakpoints)
-// - $gutters
+// - $desktop, $tablet, $mobile (global breakpoints)
+// - $gutters (global)
+// - $content-width (global)
 // - $adakite-grid
 // Optional Variables
 // - $adakite-grid-height
 ////////////////////////
+
+$adakite-grid: 3 !default;
 
 @mixin adakite-grid-height {
   $adakite-grid-height: false !default;
 
   @if $adakite-grid-height {
     max-height: $adakite-grid-height;
+    min-height: $adakite-grid-height;
   }
 }
 
@@ -26,6 +30,8 @@
  * Grid Setup
  */
 .adakite {
+  width: $content-width;
+
   .adakite-content-header {
     margin-bottom: $gutters;
 
@@ -38,41 +44,49 @@
     }
   }
 
-  @include layout($adakite-grid) {
-    .adakite-column-left {
-      @include grid-span(1, 1);
+  .adakite-column-container {
+    @include layout($adakite-grid) {
+      //@include background-grid;
+
+      .adakite-column-left {
+        @include grid-span(1, 1);
+      }
+
+      .adakite-column-middle {
+        @include grid-span(1, 2);
+      }
+
+      .adakite-column-right {
+        @include grid-span(1, 3);
+      }
     }
 
-    .adakite-column-middle {
-      @include grid-span(1, 2);
-    }
+    .adakite-column {
+      .panel-pane {
+        @include adakite-grid-height;
+        margin-bottom: $gutters;
 
-    .adakite-column-right {
-      @include grid-span(1, 3);
-    }
-
-    .adakite-content-footer-left {
-      @include grid-span(2, 1);
-    }
-
-    .adakite-content-footer-right {
-      @include grid-span(1, 3);
-    }
-  }
-
-  .adakite-column {
-    .panel-pane {
-      @include adakite-grid-height;
-      margin-bottom: $gutters;
-
-      &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
 
-  .adakite-content-footer {
+  .adakite-content-footer-container {
     margin-top: $gutters;
+
+    @include layout($adakite-grid) {
+      //@include background-grid;
+
+      .adakite-content-footer-left {
+        @include grid-span(2, 1);
+      }
+
+      .adakite-content-footer-right {
+        @include grid-span(1, 3);
+      }
+    }
 
     .panel-pane {
       @include adakite-grid-height;
