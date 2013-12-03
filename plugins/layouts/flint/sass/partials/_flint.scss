@@ -12,7 +12,7 @@
 // - $flint-grid
 ////////////////////////
 
-$flint-grid: 1 4 !default;
+$flint-grid: 30 !default;
 
 /*
  * Grid Setup
@@ -24,11 +24,11 @@ $flint-grid: 1 4 !default;
     //@include background-grid;
 
     .flint-sidebar {
-      @include grid-span(1, 1);
+      @include grid-span(6, 1);
     }
 
     .flint-content-main {
-      @include grid-span(1, 2);
+      @include grid-span(24, 7);
     }
   }
 }

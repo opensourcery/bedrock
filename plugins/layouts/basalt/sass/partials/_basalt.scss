@@ -15,7 +15,7 @@
 // - $basalt-grid-height
 ////////////////////////
 
-$basalt-grid: 3 !default;
+$basalt-grid: 30 !default;
 
 @mixin basalt-grid-height {
   $basalt-grid-height: false !default;
@@ -49,15 +49,15 @@ $basalt-grid: 3 !default;
       //@include background-grid;
 
       .basalt-column-left {
-        @include grid-span(1, 1);
+        @include grid-span(10, 1);
       }
 
       .basalt-column-middle {
-        @include grid-span(1, 2);
+        @include grid-span(10, 11);
       }
 
       .basalt-column-right {
-        @include grid-span(1, 3);
+        @include grid-span(10, 21);
       }
     }
 

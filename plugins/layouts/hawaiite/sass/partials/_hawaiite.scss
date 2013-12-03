@@ -15,7 +15,7 @@
 // - $hawaiite-grid-height
 ////////////////////////
 
-$hawaiite-grid: 3 !default;
+$hawaiite-grid: 30 !default;
 
 @mixin hawaiite-grid-height {
   $hawaiite-grid-height: false !default;
@@ -49,15 +49,15 @@ $hawaiite-grid: 3 !default;
       //@include background-grid;
 
       .hawaiite-column-left {
-        @include grid-span(1, 1);
+        @include grid-span(10, 1);
       }
 
       .hawaiite-column-middle {
-        @include grid-span(1, 2);
+        @include grid-span(10, 11);
       }
 
       .hawaiite-column-right {
-        @include grid-span(1, 3);
+        @include grid-span(10, 21);
       }
     }
 

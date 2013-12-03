@@ -13,7 +13,7 @@
 // - $obsidian-grid
 ////////////////////////
 
-$obsidian-grid: 3 !default;
+$obsidian-grid: 30 !default;
 
 /*
  * Grid Setup
@@ -26,15 +26,15 @@ $obsidian-grid: 3 !default;
       //@include background-grid;
 
       .obsidian-column-left {
-        @include grid-span(1, 1);
+        @include grid-span(10, 1);
       }
 
       .obsidian-column-middle {
-        @include grid-span(1, 2);
+        @include grid-span(10, 11);
       }
 
       .obsidian-column-right {
-        @include grid-span(1, 3);
+        @include grid-span(10, 21);
       }
     }
 

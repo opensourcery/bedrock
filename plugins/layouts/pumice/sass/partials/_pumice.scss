@@ -13,7 +13,7 @@
 // - $pumice-grid
 ////////////////////////
 
-$pumice-grid: 2 !default;
+$pumice-grid: 30 !default;
 
 /*
  * Grid Setup
@@ -26,11 +26,11 @@ $pumice-grid: 2 !default;
       //@include background-grid;
 
       .pumice-column-left {
-        @include grid-span(1, 1);
+        @include grid-span(15, 1);
       }
 
       .pumice-column-right {
-        @include grid-span(1, 2);
+        @include grid-span(15, 16);
       }
     }
 

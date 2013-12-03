@@ -13,7 +13,7 @@
 // - $coal-grid
 ////////////////////////
 
-$coal-grid: 2 3 !default;
+$coal-grid: 30 !default;
 
 /*
  * Grid Setup
@@ -26,11 +26,11 @@ $coal-grid: 2 3 !default;
       //@include background-grid;
 
       .coal-column-left {
-        @include grid-span(1, 1);
+        @include grid-span(12, 1);
       }
 
       .coal-column-right {
-        @include grid-span(1, 2);
+        @include grid-span(18, 13);
       }
     }
 

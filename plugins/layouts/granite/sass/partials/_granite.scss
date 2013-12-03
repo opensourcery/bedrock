@@ -15,7 +15,7 @@
 // - $granite-grid-height
 ////////////////////////
 
-$granite-grid: 2 !default;
+$granite-grid: 30 !default;
 
 @mixin granite-grid-height {
   $granite-grid-height: false !default;
@@ -49,11 +49,11 @@ $granite-grid: 2 !default;
       //@include background-grid;
 
       .granite-column-left {
-        @include grid-span(1, 1);
+        @include grid-span(15, 1);
       }
 
       .granite-column-right {
-        @include grid-span(1, 2);
+        @include grid-span(15, 16);
       }
     }
 

@@ -15,7 +15,7 @@
 // - $adakite-grid-height
 ////////////////////////
 
-$adakite-grid: 3 !default;
+$adakite-grid: 30 !default;
 
 @mixin adakite-grid-height {
   $adakite-grid-height: false !default;
@@ -49,15 +49,15 @@ $adakite-grid: 3 !default;
       //@include background-grid;
 
       .adakite-column-left {
-        @include grid-span(1, 1);
+        @include grid-span(10, 1);
       }
 
       .adakite-column-middle {
-        @include grid-span(1, 2);
+        @include grid-span(10, 11);
       }
 
       .adakite-column-right {
-        @include grid-span(1, 3);
+        @include grid-span(10, 21);
       }
     }
 
@@ -80,11 +80,11 @@ $adakite-grid: 3 !default;
       //@include background-grid;
 
       .adakite-content-footer-left {
-        @include grid-span(2, 1);
+        @include grid-span(20, 1);
       }
 
       .adakite-content-footer-right {
-        @include grid-span(1, 3);
+        @include grid-span(10, 21);
       }
     }
 

@@ -15,7 +15,7 @@
 // - $quartz-grid-height
 ////////////////////////
 
-$quartz-grid: 3 !default;
+$quartz-grid: 30 !default;
 
 @mixin quartz-grid-height {
   $quartz-grid-height: false !default;
@@ -50,11 +50,11 @@ $quartz-grid: 3 !default;
       //@include background-grid;
 
       .quartz-content-header-left {
-        @include grid-span(2, 1);
+        @include grid-span(20, 1);
       }
 
       .quartz-content-header-right {
-        @include grid-span(1, 3);
+        @include grid-span(10, 21);
       }
     }
   }

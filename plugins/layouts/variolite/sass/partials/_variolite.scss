@@ -14,8 +14,8 @@
 // - $variolite-content-grid
 ////////////////////////
 
-$variolite-grid: 1 4 !default;
-$variolite-content-grid: 3 1 !default;
+$variolite-grid: 30 !default;
+$variolite-content-grid: 24 !default;
 
 /*
  * Grid Setup
@@ -27,11 +27,11 @@ $variolite-content-grid: 3 1 !default;
     //@include background-grid;
 
     .variolite-sidebar {
-      @include grid-span(1, 1);
+      @include grid-span(6, 1);
     }
 
     .variolite-content-container {
-      @include grid-span(1, 2);
+      @include grid-span(24, 7);
 
       .variolite-content-header {
         margin-bottom: $gutters;
@@ -42,11 +42,11 @@ $variolite-content-grid: 3 1 !default;
           //@include background-grid;
 
           .variolite-content-main-column {
-            @include grid-span(1, 1);
+            @include grid-span(18, 1);
           }
 
           .variolite-content-secondary-column {
-            @include grid-span(1, 2);
+            @include grid-span(6, 19);
 
             .panel-pane {
               margin-bottom: $gutters;
