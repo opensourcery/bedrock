@@ -7,36 +7,53 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $gutters (global)
-// - $content-width (global)
-// - $pumice-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 ////////////////////////
-
-$pumice-grid: 30 !default;
 
 /*
  * Grid Setup
  */
 .pumice {
-  width: $content-width;
+  //@include background-grid;
 
   .pumice-column-container {
-    @include layout($pumice-grid) {
-      //@include background-grid;
+    .pumice-column-left {
+      @include grid-span(3, 1);
 
-      .pumice-column-left {
-        @include grid-span(15, 1);
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .pumice-column-right {
+      @include breakpoint($medium) {
+        @include grid-span(9, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(15, 1);
+      }
+    }
+
+    .pumice-column-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(9, 10);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(15, 16);
       }
     }
 
     .pumice-column {
       .panel-pane {
-        margin-bottom: $gutters;
+        margin-bottom: 1em;
 
         &:last-child {
           margin-bottom: 0;
