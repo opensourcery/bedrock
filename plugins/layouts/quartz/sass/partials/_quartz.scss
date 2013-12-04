@@ -7,15 +7,12 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $gutters (global)
-// - $content-width (global)
-// - $quartz-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 // Optional Variables
 // - $quartz-grid-height
 ////////////////////////
-
-$quartz-grid: 30 !default;
 
 @mixin quartz-grid-height {
   $quartz-grid-height: false !default;
@@ -30,13 +27,13 @@ $quartz-grid: 30 !default;
  * Grid Setup
  */
 .quartz {
-  width: $content-width;
+  //@include background-grid;
 
   .quartz-content-header {
-    margin-bottom: $gutters;
+    margin-bottom: 1em;
 
     .panel-pane {
-      margin-bottom: $gutters;
+      margin-bottom: 1em;
       @include quartz-grid-height;
 
       &:last-child {
@@ -46,16 +43,52 @@ $quartz-grid: 30 !default;
   }
 
   .quartz-content-header-container {
-    @include layout($quartz-grid) {
-      //@include background-grid;
+    .quartz-content-header-left {
+      @include grid-span(3, 1);
 
-      .quartz-content-header-left {
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(12, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(20, 1);
       }
+    }
 
-      .quartz-content-header-right {
+    .quartz-content-header-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 13);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 21);
       }
+    }
+  }
+
+  .quartz-content-main {
+    @include grid-span(3, 1);
+
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
     }
   }
 }
