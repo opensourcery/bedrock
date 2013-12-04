@@ -7,40 +7,69 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $gutters (global)
-// - $content-width (global)
-// - $obsidian-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 ////////////////////////
-
-$obsidian-grid: 30 !default;
 
 /*
  * Grid Setup
  */
 .obsidian {
-  width: $content-width;
+  //@include background-grid;
 
   .obsidian-column-container {
-    @include layout($obsidian-grid) {
-      //@include background-grid;
+    .obsidian-column-left {
+      @include grid-span(3, 1);
 
-      .obsidian-column-left {
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 1);
       }
+    }
 
-      .obsidian-column-middle {
-        @include grid-span(10, 11);
+    .obsidian-column-middle {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .obsidian-column-right {
+      @include breakpoint($medium) {
+        @include grid-span(6, 7);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(10, 11);
+      }
+    }
+
+    .obsidian-column-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 13);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 21);
       }
     }
 
     .obsidian-column {
       .panel-pane {
-        margin-bottom: $gutters;
+        margin-bottom: 1em;
 
         &:last-child {
           margin-bottom: 0;
