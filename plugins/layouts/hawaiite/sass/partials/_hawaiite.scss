@@ -7,15 +7,12 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $gutters (global)
-// - $content-width (global)
-// - $hawaiite-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 // Optional Variables
 // - $hawaiite-grid-height
 ////////////////////////
-
-$hawaiite-grid: 30 !default;
 
 @mixin hawaiite-grid-height {
   $hawaiite-grid-height: false !default;
@@ -30,13 +27,27 @@ $hawaiite-grid: 30 !default;
  * Grid Setup
  */
 .hawaiite {
-  width: $content-width;
+  //@include background-grid;
 
   .hawaiite-content-header {
-    margin-bottom: $gutters;
+    @include grid-span(3, 1);
+
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    margin-bottom: 1em;
 
     .panel-pane {
-      margin-bottom: $gutters;
+      margin-bottom: 1em;
 
       &:last-child {
         margin-bottom: 0;
@@ -45,18 +56,64 @@ $hawaiite-grid: 30 !default;
   }
 
   .hawaiite-column-container {
-    @include layout($hawaiite-grid) {
-      //@include background-grid;
+    @include grid-span(3, 1);
 
-      .hawaiite-column-left {
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    .hawaiite-column-left {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 1);
       }
+    }
 
-      .hawaiite-column-middle {
-        @include grid-span(10, 11);
+    .hawaiite-column-middle {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .hawaiite-column-right {
+      @include breakpoint($medium) {
+        @include grid-span(6, 7);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(10, 11);
+      }
+    }
+
+    .hawaiite-column-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 13);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 21);
       }
     }
@@ -64,7 +121,7 @@ $hawaiite-grid: 30 !default;
     .hawaiite-column {
       .panel-pane {
         @include hawaiite-grid-height;
-        margin-bottom: $gutters;
+        margin-bottom: 1em;
 
         &:last-child {
           margin-bottom: 0;
@@ -74,10 +131,24 @@ $hawaiite-grid: 30 !default;
   }
 
   .hawaiite-content-footer {
-    margin-top: $gutters;
+    @include grid-span(3, 1);
+
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    margin-top: 1em;
 
     .panel-pane {
-      margin-bottom: $gutters;
+      margin-bottom: 1em;
 
       &:last-child {
         margin-bottom: 0;
