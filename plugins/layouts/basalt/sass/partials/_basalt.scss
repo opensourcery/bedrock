@@ -7,15 +7,12 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $gutters (global)
-// - $content-width (global)
-// - $basalt-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 // Optional Variables
 // - $basalt-grid-height
 ////////////////////////
-
-$basalt-grid: 30 !default;
 
 @mixin basalt-grid-height {
   $basalt-grid-height: false !default;
@@ -30,13 +27,27 @@ $basalt-grid: 30 !default;
  * Grid Setup
  */
 .basalt {
-  width: $content-width;
+  //@include background-grid;
 
   .basalt-content-header {
-    margin-bottom: $gutters;
+    @include grid-span(3, 1);
+
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    margin-bottom: 1em;
 
     .panel-pane {
-      margin-bottom: $gutters;
+      margin-bottom: 1em;
 
       &:last-child {
         margin-bottom: 0;
@@ -45,18 +56,64 @@ $basalt-grid: 30 !default;
   }
 
   .basalt-column-container {
-    @include layout($basalt-grid) {
-      //@include background-grid;
+    @include grid-span(3, 1);
 
-      .basalt-column-left {
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    .basalt-column-left {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 1);
       }
+    }
 
-      .basalt-column-middle {
-        @include grid-span(10, 11);
+    .basalt-column-middle {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .basalt-column-right {
+      @include breakpoint($medium) {
+        @include grid-span(6, 7);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(10, 11);
+      }
+    }
+
+    .basalt-column-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 13);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 21);
       }
     }
@@ -64,7 +121,7 @@ $basalt-grid: 30 !default;
     .basalt-column {
       .panel-pane {
         @include basalt-grid-height;
-        margin-bottom: $gutters;
+        margin-bottom: 1em;
 
         &:last-child {
           margin-bottom: 0;
