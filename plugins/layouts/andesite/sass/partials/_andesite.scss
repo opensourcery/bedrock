@@ -7,17 +7,12 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $gutters (global)
-// - $content-width (global)
-// - $andesite-header-grid
-// - $andesite-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 // Optional Variables
 // - $andesite-grid-height
 ////////////////////////
-
-$andesite-header-grid: 30 !default;
-$andesite-grid: 30 !default;
 
 @mixin andesite-grid-height {
   $andesite-grid-height: false !default;
@@ -32,37 +27,117 @@ $andesite-grid: 30 !default;
  * Grid Setup
  */
 .andesite {
-  width: $content-width;
+  //@include background-grid;
 
   .andesite-content-header-container {
-    margin-bottom: $gutters;
+    @include grid-span(3, 1);
 
-    @include layout($andesite-header-grid) {
-      //@include background-grid;
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
 
-      .andesite-content-header-left {
-        @include grid-span(15, 1);
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    margin-bottom: 1em;
+
+    .andesite-content-header-left {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .andesite-content-header-right {
+      @include breakpoint($medium) {
+        @include grid-span(9, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(15, 1);
+      }
+    }
+
+    .andesite-content-header-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(9, 10);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(15, 16);
       }
     }
   }
 
   .andesite-column-container {
-    @include layout($andesite-grid) {
-      //@include background-grid;
+    @include grid-span(3, 1);
 
-      .andesite-column-left {
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    .andesite-column-left {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 1);
       }
+    }
 
-      .andesite-column-middle {
-        @include grid-span(10, 11);
+    .andesite-column-middle {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .andesite-column-right {
+      @include breakpoint($medium) {
+        @include grid-span(6, 7);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(10, 11);
+      }
+    }
+
+    .andesite-column-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 13);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 21);
       }
     }
@@ -70,7 +145,7 @@ $andesite-grid: 30 !default;
     .andesite-column {
       .panel-pane {
         @include andesite-grid-height;
-        margin-bottom: $gutters;
+        margin-bottom: 1em;
 
         &:last-child {
           margin-bottom: 0;
