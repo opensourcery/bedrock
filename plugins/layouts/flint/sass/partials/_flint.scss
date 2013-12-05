@@ -7,27 +7,45 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $content-width (global)
-// - $flint-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 ////////////////////////
-
-$flint-grid: 30 !default;
 
 /*
  * Grid Setup
  */
 .flint {
-  width: $content-width;
+  //@include background-grid;
 
-  @include layout($flint-grid) {
-    //@include background-grid;
+  .flint-sidebar {
+    @include grid-span(3, 1);
 
-    .flint-sidebar {
+    @include breakpoint($small) {
       @include grid-span(6, 1);
     }
 
-    .flint-content-main {
+    @include breakpoint($medium) {
+      @include grid-span(4, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(6, 1);
+    }
+  }
+
+  .flint-content-main {
+    @include grid-span(3, 1);
+
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(14, 5);
+    }
+
+    @include breakpoint($large, $xlarge) {
       @include grid-span(24, 7);
     }
   }
