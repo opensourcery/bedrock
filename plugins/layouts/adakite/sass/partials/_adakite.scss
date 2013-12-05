@@ -7,15 +7,12 @@
 // and include in your SMACSS based layout file.
 //
 // Required Variables
-// - $desktop, $tablet, $mobile (global breakpoints)
-// - $gutters (global)
-// - $content-width (global)
-// - $adakite-grid
+// - $small, $medium, $large, $xlarge (global breakpoints)
+// - $grids, set at global breakpoints
+// - $gutters, set at global breakpoints
 // Optional Variables
 // - $adakite-grid-height
 ////////////////////////
-
-$adakite-grid: 30 !default;
 
 @mixin adakite-grid-height {
   $adakite-grid-height: false !default;
@@ -30,13 +27,27 @@ $adakite-grid: 30 !default;
  * Grid Setup
  */
 .adakite {
-  width: $content-width;
+  //@include background-grid;
 
   .adakite-content-header {
-    margin-bottom: $gutters;
+    @include grid-span(3, 1);
+
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    margin-bottom: 1em;
 
     .panel-pane {
-      margin-bottom: $gutters;
+      margin-bottom: 1em;
 
       &:last-child {
         margin-bottom: 0;
@@ -45,18 +56,64 @@ $adakite-grid: 30 !default;
   }
 
   .adakite-column-container {
-    @include layout($adakite-grid) {
-      //@include background-grid;
+    @include grid-span(3, 1);
 
-      .adakite-column-left {
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
+    .adakite-column-left {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 1);
       }
+    }
 
-      .adakite-column-middle {
-        @include grid-span(10, 11);
+    .adakite-column-middle {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .adakite-column-right {
+      @include breakpoint($medium) {
+        @include grid-span(6, 7);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(10, 11);
+      }
+    }
+
+    .adakite-column-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 13);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 21);
       }
     }
@@ -64,7 +121,7 @@ $adakite-grid: 30 !default;
     .adakite-column {
       .panel-pane {
         @include adakite-grid-height;
-        margin-bottom: $gutters;
+        margin-bottom: 1em;
 
         &:last-child {
           margin-bottom: 0;
@@ -74,22 +131,63 @@ $adakite-grid: 30 !default;
   }
 
   .adakite-content-footer-container {
+    @include grid-span(3, 1);
+
+    @include breakpoint($small) {
+      @include grid-span(6, 1);
+    }
+
+    @include breakpoint($medium) {
+      @include grid-span(18, 1);
+    }
+
+    @include breakpoint($large, $xlarge) {
+      @include grid-span(30, 1);
+    }
+
     margin-top: $gutters;
 
-    @include layout($adakite-grid) {
-      //@include background-grid;
+    .adakite-content-footer-left {
+      @include grid-span(3, 1);
 
-      .adakite-content-footer-left {
-        @include grid-span(20, 1);
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
       }
 
-      .adakite-content-footer-right {
+      @include breakpoint($medium) {
+        @include grid-span(12, 1);
+      }
+
+      @include breakpoint($large, $xlarge) {
+        @include grid-span(20, 1);
+      }
+    }
+
+    .adakite-content-footer-right {
+      @include grid-span(3, 1);
+
+      @include breakpoint($small) {
+        @include grid-span(6, 1);
+      }
+
+      @include breakpoint($medium) {
+        @include grid-span(6, 13);
+      }
+
+      @include breakpoint($large, $xlarge) {
         @include grid-span(10, 21);
       }
     }
 
-    .panel-pane {
-      @include adakite-grid-height;
+    .adakite-content-footer {
+      .panel-pane {
+        @include adakite-grid-height;
+        margin-bottom: 1em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
