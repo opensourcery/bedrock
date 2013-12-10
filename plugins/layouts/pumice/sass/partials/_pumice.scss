@@ -30,7 +30,11 @@
         @include grid-span(9, 1);
       }
 
-      @include breakpoint($large, $xlarge) {
+      @include breakpoint($large) {
+        @include grid-span(15, 1);
+      }
+
+      @include breakpoint($xlarge) {
         @include grid-span(15, 1);
       }
     }
@@ -46,7 +50,11 @@
         @include grid-span(9, 10);
       }
 
-      @include breakpoint($large, $xlarge) {
+      @include breakpoint($large) {
+        @include grid-span(15, 16);
+      }
+
+      @include breakpoint($xlarge) {
         @include grid-span(15, 16);
       }
     }
