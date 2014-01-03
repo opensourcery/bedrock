@@ -50,4 +50,5 @@ Additionally, we suggest the use of [Aurora](http://drupal.org/project/aurora) a
 5. @TODO Finish directions.
 
 ### Resources
-** [Scalable and Modular Architecture for CSS](http://smacss.com)
+
+* [Scalable and Modular Architecture for CSS](http://smacss.com)
