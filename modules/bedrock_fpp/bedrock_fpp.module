@@ -1,0 +1,48 @@
+<?php
+/**
+ * @file
+ * Code for the bedrock_fpp feature.
+ */
+
+include_once 'bedrock_fpp.features.inc';
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * Create Fieldable Panels Pane bundle for linked image panes.
+ */
+function bedrock_fpp_entity_info_alter(&$entity_info) {
+  if (isset($entity_info['fieldable_panels_pane'])) {
+    // Slides for slideshow.
+    $entity_info['fieldable_panels_pane']['bundles']['slide_pane'] = array(
+      'label' => t('Slide'),
+      'admin' => array(
+        'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+        'bundle argument' => 4,
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/slide_pane',
+        'access arguments' => array('administer fieldable panels panes'),
+      ),
+    );
+    // Custom view mode for slideshow.
+    $entity_info['fieldable_panels_pane']['view modes']['slide'] = array(
+      'label' => t('Slide'),
+      'custom settings' => TRUE,
+    );
+
+    // Slideshow itself.
+    $entity_info['fieldable_panels_pane']['bundles']['slideshow_pane'] = array(
+      'label' => t('Slideshow'),
+      'admin' => array(
+        'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+        'bundle argument' => 4,
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow_pane',
+        'access arguments' => array('administer fieldable panels panes'),
+      ),
+      'pane category' => t('Widgets'),
+      // Place slideshow creation at the top level.
+      'pane top level' => TRUE,
+      // Add an icon because we can.
+      'pane icon' => drupal_get_path('module', 'bedrock_fpp') . '/icons/icon-slideshow.png',
+    );
+  }
+}
