@@ -14,12 +14,12 @@ include_once 'bedrock_fpp.features.inc';
 function bedrock_fpp_entity_info_alter(&$entity_info) {
   if (isset($entity_info['fieldable_panels_pane'])) {
     // Slides for slideshow.
-    $entity_info['fieldable_panels_pane']['bundles']['slide_pane'] = array(
+    $entity_info['fieldable_panels_pane']['bundles']['slide'] = array(
       'label' => t('Slide'),
       'admin' => array(
         'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
         'bundle argument' => 4,
-        'real path' => 'admin/structure/fieldable-panels-panes/manage/slide_pane',
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/slide',
         'access arguments' => array('administer fieldable panels panes'),
       ),
     );
@@ -30,12 +30,12 @@ function bedrock_fpp_entity_info_alter(&$entity_info) {
     );
 
     // Slideshow itself.
-    $entity_info['fieldable_panels_pane']['bundles']['slideshow_pane'] = array(
+    $entity_info['fieldable_panels_pane']['bundles']['slideshow'] = array(
       'label' => t('Slideshow'),
       'admin' => array(
         'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
         'bundle argument' => 4,
-        'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow_pane',
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/slideshow',
         'access arguments' => array('administer fieldable panels panes'),
       ),
       'pane category' => t('Widgets'),

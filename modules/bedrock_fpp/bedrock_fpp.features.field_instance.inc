@@ -10,9 +10,9 @@
 function bedrock_fpp_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-slide_pane-field_slideshow_slide_body_text'
-  $field_instances['fieldable_panels_pane-slide_pane-field_slideshow_slide_body_text'] = array(
-    'bundle' => 'slide_pane',
+  // Exported field_instance: 'fieldable_panels_pane-slide-field_slideshow_slide_body_text'
+  $field_instances['fieldable_panels_pane-slide-field_slideshow_slide_body_text'] = array(
+    'bundle' => 'slide',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -53,9 +53,9 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-slide_pane-field_slideshow_slide_image'
-  $field_instances['fieldable_panels_pane-slide_pane-field_slideshow_slide_image'] = array(
-    'bundle' => 'slide_pane',
+  // Exported field_instance: 'fieldable_panels_pane-slide-field_slideshow_slide_image'
+  $field_instances['fieldable_panels_pane-slide-field_slideshow_slide_image'] = array(
+    'bundle' => 'slide',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -117,9 +117,9 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-slide_pane-field_slideshow_slide_link'
-  $field_instances['fieldable_panels_pane-slide_pane-field_slideshow_slide_link'] = array(
-    'bundle' => 'slide_pane',
+  // Exported field_instance: 'fieldable_panels_pane-slide-field_slideshow_slide_link'
+  $field_instances['fieldable_panels_pane-slide-field_slideshow_slide_link'] = array(
+    'bundle' => 'slide',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -167,9 +167,9 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-slideshow_pane-field_slideshow_slide'
-  $field_instances['fieldable_panels_pane-slideshow_pane-field_slideshow_slide'] = array(
-    'bundle' => 'slideshow_pane',
+  // Exported field_instance: 'fieldable_panels_pane-slideshow-field_slideshow_slide'
+  $field_instances['fieldable_panels_pane-slideshow-field_slideshow_slide'] = array(
+    'bundle' => 'slideshow',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',

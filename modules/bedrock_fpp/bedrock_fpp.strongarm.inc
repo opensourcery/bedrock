@@ -13,7 +13,7 @@ function bedrock_fpp_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_fieldable_panels_pane__slideshow_pane';
+  $strongarm->name = 'field_bundle_settings_fieldable_panels_pane__slideshow';
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
@@ -49,12 +49,12 @@ function bedrock_fpp_strongarm() {
       ),
     ),
   );
-  $export['field_bundle_settings_fieldable_panels_pane__slideshow_pane'] = $strongarm;
+  $export['field_bundle_settings_fieldable_panels_pane__slideshow'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_fieldable_panels_pane__slide_pane';
+  $strongarm->name = 'field_bundle_settings_fieldable_panels_pane__slide';
   $strongarm->value = array(
     'view_modes' => array(
       'slide' => array(
@@ -86,7 +86,7 @@ function bedrock_fpp_strongarm() {
       ),
     ),
   );
-  $export['field_bundle_settings_fieldable_panels_pane__slide_pane'] = $strongarm;
+  $export['field_bundle_settings_fieldable_panels_pane__slide'] = $strongarm;
 
   return $export;
 }

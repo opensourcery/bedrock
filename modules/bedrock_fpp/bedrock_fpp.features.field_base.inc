@@ -47,7 +47,7 @@ function bedrock_fpp_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'slide_pane' => 'slide_pane',
+          'slide' => 'slide',
         ),
       ),
       'profile2_private' => FALSE,

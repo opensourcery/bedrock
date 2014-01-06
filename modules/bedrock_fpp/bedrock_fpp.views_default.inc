@@ -55,7 +55,7 @@ function bedrock_fpp_views_default_views() {
   $handler->display->display_options['filters']['bundle']['table'] = 'fieldable_panels_panes';
   $handler->display->display_options['filters']['bundle']['field'] = 'bundle';
   $handler->display->display_options['filters']['bundle']['value'] = array(
-    'slide_pane' => 'slide_pane',
+    'slide' => 'slide',
   );
 
   /* Display: Reference dialog Search */
@@ -64,7 +64,7 @@ function bedrock_fpp_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['attach'] = array(
-    0 => 'fieldable_panels_pane:field_slideshow_slide:slideshow_pane',
+    0 => 'fieldable_panels_pane:field_slideshow_slide:slideshow',
   );
   $export['bedrock_fpp_slide_search'] = $view;
 
