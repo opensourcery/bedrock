@@ -9,7 +9,10 @@ include_once 'bedrock_fpp.features.inc';
 /**
  * Implements hook_entity_info_alter().
  *
- * Create Fieldable Panels Pane bundle for linked image panes.
+ * Create Fieldable Panels Pane bundles:
+ *  * `slide` - can be placed into slideshows, these are not placed in panels
+ *    themselves.
+ *  * `slideshow` - A slideshow pane.
  */
 function bedrock_fpp_entity_info_alter(&$entity_info) {
   if (isset($entity_info['fieldable_panels_pane'])) {
