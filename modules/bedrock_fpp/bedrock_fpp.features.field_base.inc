@@ -150,13 +150,13 @@ function bedrock_fpp_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_toute_caption'
-  $field_bases['field_toute_caption'] = array(
+  // Exported field_base: 'field_tout_caption'
+  $field_bases['field_tout_caption'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_toute_caption',
+    'field_name' => 'field_tout_caption',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -182,13 +182,13 @@ function bedrock_fpp_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_toute_image'
-  $field_bases['field_toute_image'] = array(
+  // Exported field_base: 'field_tout_image'
+  $field_bases['field_tout_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_toute_image',
+    'field_name' => 'field_tout_image',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -216,13 +216,13 @@ function bedrock_fpp_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_toute_link'
-  $field_bases['field_toute_link'] = array(
+  // Exported field_base: 'field_tout_link'
+  $field_bases['field_tout_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_toute_link',
+    'field_name' => 'field_tout_link',
     'field_permissions' => array(
       'type' => 0,
     ),

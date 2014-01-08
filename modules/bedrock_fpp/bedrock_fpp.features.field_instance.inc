@@ -220,9 +220,9 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-toute-field_toute_caption'
-  $field_instances['fieldable_panels_pane-toute-field_toute_caption'] = array(
-    'bundle' => 'toute',
+  // Exported field_instance: 'fieldable_panels_pane-tout-field_toute_caption'
+  $field_instances['fieldable_panels_pane-tout-field_toute_caption'] = array(
+    'bundle' => 'tout',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -243,7 +243,7 @@ function bedrock_fpp_field_default_field_instances() {
     ),
     'entity_type' => 'fieldable_panels_pane',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_toute_caption',
+    'field_name' => 'field_tout_caption',
     'label' => 'Caption',
     'required' => 0,
     'settings' => array(
@@ -261,9 +261,9 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-toute-field_toute_image'
-  $field_instances['fieldable_panels_pane-toute-field_toute_image'] = array(
-    'bundle' => 'toute',
+  // Exported field_instance: 'fieldable_panels_pane-tout-field_toute_image'
+  $field_instances['fieldable_panels_pane-tout-field_toute_image'] = array(
+    'bundle' => 'tout',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -285,7 +285,7 @@ function bedrock_fpp_field_default_field_instances() {
     ),
     'entity_type' => 'fieldable_panels_pane',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_toute_image',
+    'field_name' => 'field_tout_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
@@ -329,9 +329,9 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-toute-field_toute_link'
-  $field_instances['fieldable_panels_pane-toute-field_toute_link'] = array(
-    'bundle' => 'toute',
+  // Exported field_instance: 'fieldable_panels_pane-tout-field_toute_link'
+  $field_instances['fieldable_panels_pane-tout-field_toute_link'] = array(
+    'bundle' => 'tout',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Links here can be relative URLs, such as <em>home</em> or <em>about</em>. They can also be absolute URLs pointing offsite, such as <em>http://google.com</em>.',
@@ -352,7 +352,7 @@ function bedrock_fpp_field_default_field_instances() {
     ),
     'entity_type' => 'fieldable_panels_pane',
     'fences_wrapper' => 'div',
-    'field_name' => 'field_toute_link',
+    'field_name' => 'field_tout_link',
     'label' => 'Link',
     'required' => 0,
     'settings' => array(
