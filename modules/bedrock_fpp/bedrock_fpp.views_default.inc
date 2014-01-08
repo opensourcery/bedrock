@@ -50,6 +50,18 @@ function bedrock_fpp_views_default_views() {
   $handler->display->display_options['fields']['fpid']['id'] = 'fpid';
   $handler->display->display_options['fields']['fpid']['table'] = 'fieldable_panels_panes';
   $handler->display->display_options['fields']['fpid']['field'] = 'fpid';
+  $handler->display->display_options['fields']['fpid']['exclude'] = TRUE;
+  /* Field: Fieldable panel pane: Link */
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['id'] = 'field_slideshow_slide_link';
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['table'] = 'field_data_field_slideshow_slide_link';
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['field'] = 'field_slideshow_slide_link';
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['label'] = '';
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['element_type'] = '0';
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_slideshow_slide_link']['field_api_classes'] = TRUE;
   /* Filter criterion: Fieldable pane: Bundle */
   $handler->display->display_options['filters']['bundle']['id'] = 'bundle';
   $handler->display->display_options['filters']['bundle']['table'] = 'fieldable_panels_panes';
