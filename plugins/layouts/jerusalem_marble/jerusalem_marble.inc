@@ -8,9 +8,9 @@
 // Plugin definition
 $plugin = array(
   'title' => t('Jerusalem Marble'),
-  'icon' => 'granite.png',
+  'icon' => 'jerusalem_marble.png',
   'category' => t('Bedrock'),
-  'theme' => 'granite',
+  'theme' => 'jerusalem_marble',
   'admin css' => 'admin.jerusalem_marble.css',
   'regions' => array(
     'content_header' => t('Content Header'),
