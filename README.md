@@ -1,4 +1,3 @@
-
                                            ;''
                                          ''';:
                                         ''
@@ -25,7 +24,7 @@
 Bedrock was initially developed as a base theme for Drupal. The idea to make it a helper module came from the desire to inherit and benefit from an existing theme foundation built on Aurora and the Singularity grid system. By taking advantage of Aurora's sub-theme structure, Bedrock has grown to become a robust set of helper tools for a theme system including:
 
 * Responsive Panel Layouts
-* @TODO Fieldable Panel Panes
+* Fieldable Panel Panes
 * @TODO Entity View Modes
 
 ### Requirements
