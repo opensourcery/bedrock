@@ -63,5 +63,20 @@ function bedrock_fpp_entity_info_alter(&$entity_info) {
       // Add an icon because we can.
       'pane icon' => drupal_get_path('module', 'bedrock_fpp') . '/icons/icon-image.png',
     );
+
+    // Free-form.
+    $entity_info['fieldable_panels_pane']['bundles']['freeform'] = array(
+      'label' => t('Free-form text or HTML'),
+      'admin' => array(
+        'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+        'bundle argument' => 4,
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/freeform',
+        'access arguments' => array('administer fieldable panels panes'),
+      ),
+      'pane category' => t('Widgets'),
+      'pane top level' => TRUE,
+      // Add an icon because we can.
+      'pane icon' => drupal_get_path('module', 'bedrock_fpp') . '/icons/icon-html.png',
+    );
   }
 }
