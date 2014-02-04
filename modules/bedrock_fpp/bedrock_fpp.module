@@ -49,7 +49,7 @@ function bedrock_fpp_entity_info_alter(&$entity_info) {
       'pane icon' => drupal_get_path('module', 'bedrock_fpp') . '/icons/icon-slideshow.png',
     );
 
-    // tout.
+    // Tout.
     $entity_info['fieldable_panels_pane']['bundles']['tout'] = array(
       'label' => t('tout'),
       'admin' => array(
