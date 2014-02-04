@@ -10,6 +10,46 @@
 function bedrock_fpp_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'fieldable_panels_pane-freeform-field_freeform_html'
+  $field_instances['fieldable_panels_pane-freeform-field_freeform_html'] = array(
+    'bundle' => 'freeform',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'slide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_freeform_html',
+    'label' => 'HTML',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => -4,
+    ),
+  );
+
   // Exported field_instance: 'fieldable_panels_pane-slide-field_slideshow_slide_body_text'
   $field_instances['fieldable_panels_pane-slide-field_slideshow_slide_body_text'] = array(
     'bundle' => 'slide',
