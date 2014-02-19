@@ -2,6 +2,7 @@ name = Bedrock Fieldable Panels Panes
 description = Various fieldable panels panes widgets including slideshows.
 core = 7.x
 package = Frontend
+dependencies[] = bedrock
 dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
