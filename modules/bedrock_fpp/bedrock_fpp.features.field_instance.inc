@@ -50,6 +50,130 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'fieldable_panels_pane-image_link-field_image_link_image'
+  $field_instances['fieldable_panels_pane-image_link-field_image_link_image'] = array(
+    'bundle' => 'image_link',
+    'deleted' => 0,
+    'description' => 'The image to be displayed. It will be linked to the URL selected below.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'teaser',
+          'linked_field' => array(
+            'advanced' => array(
+              'class' => '',
+              'rel' => '',
+              'target' => '',
+              'text' => '',
+              'title' => '',
+            ),
+            'destination' => '[fieldable_panels_pane:field-image-link-url:url]',
+            'linked' => 1,
+          ),
+        ),
+        'type' => 'file_rendered',
+        'weight' => 0,
+      ),
+      'slide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'fences_wrapper' => 'figure',
+    'field_name' => 'field_image_link_image',
+    'label' => 'Image',
+    'required' => 1,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'image-links',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => -4,
+    ),
+  );
+
+  // Exported field_instance: 'fieldable_panels_pane-image_link-field_image_link_url'
+  $field_instances['fieldable_panels_pane-image_link-field_image_link_url'] = array(
+    'bundle' => 'image_link',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A relative (eg, <em>node/3</em> or <em>about</em>) or absolute (eg, <em>http://www.google.com</em>) URL.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'slide' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_image_link_url',
+    'label' => 'URL',
+    'required' => 1,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'user',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => -3,
+    ),
+  );
+
   // Exported field_instance: 'fieldable_panels_pane-slide-field_slideshow_slide_body_text'
   $field_instances['fieldable_panels_pane-slide-field_slideshow_slide_body_text'] = array(
     'bundle' => 'slide',
@@ -430,6 +554,7 @@ function bedrock_fpp_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A relative (eg, <em>node/3</em> or <em>about</em>) or absolute (eg, <em>http://www.google.com</em>) URL.');
   t('Caption');
   t('Description');
   t('HTML');
@@ -438,6 +563,8 @@ function bedrock_fpp_field_default_field_instances() {
   t('Links here can be relative URLs, such as <em>home</em> or <em>about</em>. They can also be absolute URLs pointing offsite, such as <em>http://google.com</em>.');
   t('Slide');
   t('Slide image');
+  t('The image to be displayed. It will be linked to the URL selected below.');
+  t('URL');
 
   return $field_instances;
 }
