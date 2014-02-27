@@ -432,6 +432,7 @@ function bedrock_fpp_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Caption');
   t('Description');
+  t('HTML');
   t('Image');
   t('Link');
   t('Links here can be relative URLs, such as <em>home</em> or <em>about</em>. They can also be absolute URLs pointing offsite, such as <em>http://google.com</em>.');
