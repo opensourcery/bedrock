@@ -10,6 +10,7 @@ include_once 'bedrock_fpp.features.inc';
  * Implements hook_entity_info_alter().
  *
  * Create Fieldable Panels Pane bundles:
+ *  * `freeform` - full HTML text area, no fields.
  *  * `slide` - can be placed into slideshows, these are not placed in panels
  *    themselves.
  *  * `slideshow` - A slideshow pane.
