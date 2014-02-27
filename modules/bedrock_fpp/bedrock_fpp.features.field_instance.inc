@@ -264,8 +264,8 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-tout-field_toute_caption'
-  $field_instances['fieldable_panels_pane-tout-field_toute_caption'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-tout-field_tout_caption'
+  $field_instances['fieldable_panels_pane-tout-field_tout_caption'] = array(
     'bundle' => 'tout',
     'default_value' => NULL,
     'deleted' => 0,
@@ -305,8 +305,8 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-tout-field_toute_image'
-  $field_instances['fieldable_panels_pane-tout-field_toute_image'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-tout-field_tout_image'
+  $field_instances['fieldable_panels_pane-tout-field_tout_image'] = array(
     'bundle' => 'tout',
     'deleted' => 0,
     'description' => '',
@@ -373,8 +373,8 @@ function bedrock_fpp_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-tout-field_toute_link'
-  $field_instances['fieldable_panels_pane-tout-field_toute_link'] = array(
+  // Exported field_instance: 'fieldable_panels_pane-tout-field_tout_link'
+  $field_instances['fieldable_panels_pane-tout-field_tout_link'] = array(
     'bundle' => 'tout',
     'default_value' => NULL,
     'deleted' => 0,
